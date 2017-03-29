@@ -10,6 +10,7 @@ target 'Be-Yoga' do
  pod 'Firebase/Auth'
  pod 'Firebase/Database'
  pod 'Firebase/Storage'
+ pod 'FBSDKLoginKit'
  
   target 'Be-YogaTests' do
     inherit! :search_paths
