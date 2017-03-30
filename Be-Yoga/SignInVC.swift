@@ -26,7 +26,14 @@ class SignInVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         if let _ = KeychainWrapper.standard.string(forKey: KEY_UID){
             print("GARETH: ID found in keychain")
-            performSegue(withIdentifier: "goToOptions", sender: nil)
+           
+            
+            let storyboard = UIStoryboard(name: "OptionsVC", bundle: nil)
+            if let OptionsVC = storyboard.instantiateViewController(withIdentifier: "OptionsVC") as? OptionsVC {
+                //   infoVC.currentPersonIndex = housemate
+                self.present(OptionsVC, animated: true, completion: nil)
+            }
+            
         }
     }
 
@@ -92,7 +99,15 @@ class SignInVC: UIViewController {
         //let keychainResult = KeychainWrapper.setString(id, forKey: KEY_UID)
         let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
         print("GARETH: Data saved to keychain \(keychainResult)")
-        performSegue(withIdentifier: "goToOptions", sender: nil)
+      
+        
+        let storyboard = UIStoryboard(name: "OptionsVC", bundle: nil)
+        if let OptionsVC = storyboard.instantiateViewController(withIdentifier: "OptionsVC") as? OptionsVC {
+            //   infoVC.currentPersonIndex = housemate
+            self.present(OptionsVC, animated: true, completion: nil)
+        }
+
+        
     }
 }
 
