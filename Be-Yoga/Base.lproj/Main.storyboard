@@ -88,6 +88,9 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="TXz-iO-HO7" firstAttribute="top" secondItem="8ej-cz-CU6" secondAttribute="bottom" constant="15" id="LCl-ln-oHy"/>
+                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fn-oJ-hDv" customClass="RoundBtn" customModule="Be_Yoga" customModuleProvider="target">
                                 <rect key="frame" x="112" y="235.5" width="150" height="150"/>
@@ -126,15 +129,148 @@
                     <connections>
                         <outlet property="emailField" destination="EDf-W4-Hm2" id="QL5-Mv-NJ0"/>
                         <outlet property="passwordField" destination="8ej-cz-CU6" id="ONO-HW-RQg"/>
+                        <segue destination="qLP-qv-X9N" kind="show" identifier="goToOptions" id="OHm-Uf-JT4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+            <point key="canvasLocation" x="-434" y="123"/>
+        </scene>
+        <!--OptionsVC-->
+        <scene sceneID="pY2-Jo-u6G">
+            <objects>
+                <viewController id="qLP-qv-X9N" customClass="OptionsVC" customModule="Be_Yoga" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d96-vH-7k8"/>
+                        <viewControllerLayoutGuide type="bottom" id="pzh-B5-p1X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="w4Z-ZU-tIA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hR3-fq-06p">
+                                <rect key="frame" x="151" y="297" width="73" height="73"/>
+                                <state key="normal" image="Social Group"/>
+                                <connections>
+                                    <action selector="socialBnTapped:" destination="qLP-qv-X9N" eventType="touchUpInside" id="XeK-iA-rVl"/>
+                                    <segue destination="cRC-Sm-pic" kind="show" identifier="goToFeed" id="RHc-Fv-Ne9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yod-r9-G0m">
+                                <rect key="frame" x="145" y="419" width="85" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                <state key="normal" title="Sign Out"/>
+                                <connections>
+                                    <action selector="signOutTapped:" destination="qLP-qv-X9N" eventType="touchUpInside" id="GDl-U8-6W4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hR3-fq-06p" firstAttribute="centerY" secondItem="w4Z-ZU-tIA" secondAttribute="centerY" id="HDn-AO-2TC"/>
+                            <constraint firstItem="hR3-fq-06p" firstAttribute="centerX" secondItem="w4Z-ZU-tIA" secondAttribute="centerX" id="HTE-1v-ch5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="kcQ-KG-4Ps"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gp8-It-dPJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="479.19999999999999" y="122.78860569715144"/>
+        </scene>
+        <!--FeedVC-->
+        <scene sceneID="3bt-dV-aCH">
+            <objects>
+                <viewController id="cRC-Sm-pic" customClass="FeedVC" customModule="Be_Yoga" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="via-f1-WH2"/>
+                        <viewControllerLayoutGuide type="bottom" id="mu8-7n-fdi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="syN-VV-YNQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RbL-r5-lzA" customClass="FancyView" customModule="Be_Yoga" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="dYT-K7-54a"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OZa-sa-exi" customClass="FancyView" customModule="Be_Yoga" customModuleProvider="target">
+                                <rect key="frame" x="16" y="85" width="343" height="65"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="iaE-Fv-yi8"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="302" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xWu-QB-nSm">
+                                <rect key="frame" x="16" y="166" width="343" height="501"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="302" id="LBN-eQ-Y8z">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="302"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LBN-eQ-Y8z" id="dKz-iT-n1g">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="301.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3m5-UN-BfM">
+                                                    <rect key="frame" x="8" y="8" width="327" height="286"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="xcQ-CT-fak">
+                                                            <rect key="frame" x="8" y="8" width="65" height="65"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="65" id="ax9-21-szh"/>
+                                                                <constraint firstAttribute="height" constant="65" id="hkz-P7-QGa"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="xcQ-CT-fak" firstAttribute="top" secondItem="3m5-UN-BfM" secondAttribute="top" constant="8" id="M25-wv-zPw"/>
+                                                        <constraint firstItem="xcQ-CT-fak" firstAttribute="leading" secondItem="3m5-UN-BfM" secondAttribute="leading" constant="8" id="tjg-hv-N0C"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3m5-UN-BfM" firstAttribute="top" secondItem="dKz-iT-n1g" secondAttribute="top" constant="8" id="kyz-wk-TXp"/>
+                                                <constraint firstAttribute="trailing" secondItem="3m5-UN-BfM" secondAttribute="trailing" constant="8" id="q59-cg-8ls"/>
+                                                <constraint firstAttribute="bottom" secondItem="3m5-UN-BfM" secondAttribute="bottom" constant="8" id="weK-Z9-a0Q"/>
+                                                <constraint firstItem="3m5-UN-BfM" firstAttribute="leading" secondItem="dKz-iT-n1g" secondAttribute="leading" constant="8" id="wiE-JS-7Ie"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.81176470590000005" green="0.84705882349999995" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OZa-sa-exi" firstAttribute="top" secondItem="RbL-r5-lzA" secondAttribute="bottom" constant="20" id="5Mn-k3-c3b"/>
+                            <constraint firstItem="RbL-r5-lzA" firstAttribute="leading" secondItem="syN-VV-YNQ" secondAttribute="leading" id="Bso-G2-iP3"/>
+                            <constraint firstItem="mu8-7n-fdi" firstAttribute="top" secondItem="xWu-QB-nSm" secondAttribute="bottom" id="TOT-IB-hNy"/>
+                            <constraint firstAttribute="trailing" secondItem="RbL-r5-lzA" secondAttribute="trailing" id="VK8-Fr-Tqa"/>
+                            <constraint firstItem="OZa-sa-exi" firstAttribute="leading" secondItem="syN-VV-YNQ" secondAttribute="leadingMargin" id="bW8-og-pom"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xWu-QB-nSm" secondAttribute="trailing" id="bmz-ZV-Whe"/>
+                            <constraint firstItem="RbL-r5-lzA" firstAttribute="top" secondItem="syN-VV-YNQ" secondAttribute="top" id="h4f-fe-TzY"/>
+                            <constraint firstItem="xWu-QB-nSm" firstAttribute="leading" secondItem="syN-VV-YNQ" secondAttribute="leadingMargin" id="p93-s5-P8E"/>
+                            <constraint firstItem="OZa-sa-exi" firstAttribute="trailing" secondItem="syN-VV-YNQ" secondAttribute="trailingMargin" id="uN7-xl-bcy"/>
+                            <constraint firstItem="xWu-QB-nSm" firstAttribute="top" secondItem="OZa-sa-exi" secondAttribute="bottom" constant="16" id="uoF-kv-aWQ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C7N-Lk-eU6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1212" y="122.78860569715144"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Social Group" width="73" height="73"/>
         <image name="be-yoga-logo" width="304" height="130"/>
         <image name="f" width="352" height="328"/>
+        <image name="profile" width="113" height="155"/>
     </resources>
 </document>

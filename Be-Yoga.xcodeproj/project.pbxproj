@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C318A871E8BBDE400E1A919 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C318A861E8BBDE400E1A919 /* FeedVC.swift */; };
+		4C318A891E8BC3AA00E1A919 /* OptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C318A881E8BC3AA00E1A919 /* OptionsVC.swift */; };
+		4C318A8B1E8BE1A000E1A919 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C318A8A1E8BE1A000E1A919 /* CircleView.swift */; };
 		4C8988921E8A94C300C82C09 /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8988911E8A94C300C82C09 /* FancyView.swift */; };
 		4C8988951E8A96CE00C82C09 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8988941E8A96CE00C82C09 /* Constants.swift */; };
 		4C8988971E8A99F400C82C09 /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8988961E8A99F400C82C09 /* RoundBtn.swift */; };
@@ -46,6 +49,9 @@
 		083B57BDA9A417FEADE90A34 /* Pods-Be-YogaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Be-YogaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Be-YogaTests/Pods-Be-YogaTests.release.xcconfig"; sourceTree = "<group>"; };
 		127485033EA41714EA2623F6 /* Pods_Be_YogaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Be_YogaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F5439A555C893F15277CC6 /* Pods-Be-Yoga.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Be-Yoga.release.xcconfig"; path = "Pods/Target Support Files/Pods-Be-Yoga/Pods-Be-Yoga.release.xcconfig"; sourceTree = "<group>"; };
+		4C318A861E8BBDE400E1A919 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		4C318A881E8BC3AA00E1A919 /* OptionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsVC.swift; sourceTree = "<group>"; };
+		4C318A8A1E8BE1A000E1A919 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		4C8988911E8A94C300C82C09 /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		4C8988941E8A96CE00C82C09 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4C8988961E8A99F400C82C09 /* RoundBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
@@ -116,6 +122,7 @@
 				4C8988961E8A99F400C82C09 /* RoundBtn.swift */,
 				4C8988981E8A9BE200C82C09 /* FancyField.swift */,
 				4C89889A1E8A9DE200C82C09 /* FancyBtn.swift */,
+				4C318A8A1E8BE1A000E1A919 /* CircleView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -124,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				4CCD6D191E8A5BB200328B73 /* SignInVC.swift */,
+				4C318A861E8BBDE400E1A919 /* FeedVC.swift */,
+				4C318A881E8BC3AA00E1A919 /* OptionsVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -508,9 +517,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C8988991E8A9BE200C82C09 /* FancyField.swift in Sources */,
+				4C318A891E8BC3AA00E1A919 /* OptionsVC.swift in Sources */,
 				4CCD6D1A1E8A5BB200328B73 /* SignInVC.swift in Sources */,
 				4C8988971E8A99F400C82C09 /* RoundBtn.swift in Sources */,
 				4CCD6D181E8A5BB200328B73 /* AppDelegate.swift in Sources */,
+				4C318A871E8BBDE400E1A919 /* FeedVC.swift in Sources */,
+				4C318A8B1E8BE1A000E1A919 /* CircleView.swift in Sources */,
 				4C8988921E8A94C300C82C09 /* FancyView.swift in Sources */,
 				4C8988951E8A96CE00C82C09 /* Constants.swift in Sources */,
 				4C89889B1E8A9DE200C82C09 /* FancyBtn.swift in Sources */,
